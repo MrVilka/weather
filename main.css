@@ -20,6 +20,55 @@
     margin-top: 13%;
     font-size: 20px;
     background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(35, 4, 212));
+    background-clip: unset;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.forbutton {
+    position: absolute;
+    width: 6%;
+    height: 15%;
+    background-color: grey;
+    float: right;
+    right: 0;
+}
+
+.button_notification {
+    width: 100%;
+    height: 100%;
+}
+
+.notification_photo {
+    width: 90%;
+}
+
+/* Работа с Уведомлениями */
+
+.window_notifs {
+    position: absolute;
+    border-radius: 10px;
+    float: right;
+    right: 0;
+    width: 40%;
+    height: 40%;
+    background-color: aqua;
+}
+
+#hide {
+    opacity: 0;
+}
+
+#hidden {
+    animation-name: tohide;
+    animation-duration: 1s;
+}
+
+@keyframes tohide {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
