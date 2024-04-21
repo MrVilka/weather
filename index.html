@@ -4,38 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <title>Weather</title>
 </head>
 <body>
 
+    <img src="./img/background.jpg" alt="" class="bg">
     <div class="datee">
         <span id="datee" class="indatee"></span>
     </div>
     <br><br>
 
-    <div class="forbutton">
-        <button class="button_notification" onmouseover="toHide()">
-            <img class="notification_photo" src="./img/notification.png" alt="Aaa">
-        </button>
+
+    <div class="notif_all">
+        <ul>
+            <li>
+                <div class="forbutton">
+                    <button class="button_notification" onmouseover="toHide()">
+                        <img class="notification_photo" src="./img/notification.png" alt="Aaa">
+                    </button>
+                </div>
+                <ul>
+                    <li>
+                        <div id="hide" class="window_notifs">
+                            <span>
+                                Уведомления
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
-    <h1 style="color: green; text-align: center" id="pogoda"> Погода </h1>
 
+    <h1 class="title"> Погода </h1>
     <br><br>
 
-    <span id="info" style="font-size: 30px"> </span>
-
-    <br>
-
-    <span id="feels_like" style="font-size: 20px"> </span>
-
-    <br>
-
-    <span id="clouds" style="font-size: 20px"> </span>
-
-    <div id="hide" class="window_notifs"></div>
+    <div class="temp2024">
+        <span id="info" style="font-size: 30px"> </span>
+        <br>
+        <span id="feels_like" style="font-size: 20px"> </span>
+        <br>
+        <span id="clouds" style="font-size: 20px"> </span>
+    </div>
+        <!-- <div id="hide" class="window_notifs"></div> -->
 
     <script src="./tempjs.js"> </script>
-    <script src="./tempjs2.js"></script>
 </body>
 </html>
