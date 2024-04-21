@@ -23,7 +23,7 @@ function httpRequest(url) {
 window.onload = function() {
     window.setInterval(async function() {
         try {
-            const data = await httpRequest(`http://api.openweathermap.org/data/2.5/weather?q=${sCity}&units=metric&lang=ru&APPID=${appid}`);
+            const data = await httpRequest(`https://api.openweathermap.org/data/2.5/weather?q=${sCity}&units=metric&lang=ru&APPID=${appid}`);
             
             info.textContent = "Температура: " + Math.round(data.main.temp) + "℃";
             feels_like.textContent = " * Ощущается как: " + Math.round(data.main.feels_like) + "℃";
