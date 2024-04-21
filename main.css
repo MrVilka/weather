@@ -2,14 +2,49 @@
     margin: 0;
     padding: 0;
 }
+
+.bg {
+    position: fixed;
+    z-index: -1;
+}
+
+body {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.window_notifs span {
+    position: relative;
+    box-shadow: 20px 20px 20px #0000002A;
+    display: block;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.temp2024 {
+    width: 60%;
+    padding: 10px 0 50px 10px;
+    background-color: rgba(255, 255, 255, 50%);
+    box-shadow: 20px 20px 20px #0000001A;
+}
+
 .datee {
     width: 100px;
     height: 50px;
-    background-color: grey;
+    position: absolute; 
     border-radius: 20px;
-    position: absolute;
-    margin: 20px;
     background: -webkit-linear-gradient(rgb(255, 251, 0), rgb(241, 12, 172));
+}
+
+.title {
+    position: relative;
+    margin-top: -3%;
+    color: greenyellow;
+    z-index: 2;
+    text-align: center;
+    text-shadow: black 13px 3px 10px;
 }
 
 .indatee {
@@ -27,19 +62,21 @@
 
 .forbutton {
     position: absolute;
-    width: 6%;
-    height: 15%;
-    background-color: grey;
+    width: 10%;
+    height: 13%;
     float: right;
     right: 0;
 }
 
 .button_notification {
-    width: 100%;
-    height: 100%;
+    position: relative;
+    border-style: none;
+    background: rgba(0, 0, 0, 25%);
+    border-radius: 50%;
 }
 
 .notification_photo {
+    position: relative;
     width: 90%;
 }
 
@@ -52,7 +89,17 @@
     right: 0;
     width: 40%;
     height: 40%;
-    background-color: aqua;
+    margin-top: 6.5%;
+    background: -webkit-linear-gradient(rgb(81, 0, 255), rgb(241, 12, 172));
+    z-index: 1;
+}
+
+ul li ul {
+    display: none;
+}
+ul li:hover > ul {
+    display: initial;
+    transition: all 1s linear;
 }
 
 #hide {
@@ -70,5 +117,44 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    body {
+      .bg {
+        height: 100vh;
+      }
+    }
+    .title {
+        margin-top: -10%;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    .bg {
+    height: 100%;
+    width: 100%;
+    }
+    .notification_photo {
+    width: 65%;
+    }
+    .forbutton {
+        height: 10%;
+    }
+    .window_notifs span {
+        font-size: 23px;
+    }
+}
+
+@media only screen and (min-width: 1700px){
+    .notification_photo {
+        width: 50%;
+    }
+    .forbutton {
+        height: 20%;
+    }
+    .window_notifs span {
+        font-size: 33px;
     }
 }
