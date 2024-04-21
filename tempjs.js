@@ -1,8 +1,6 @@
-// Для получения температуры и вывода ее
-
 const sCity = "Karagandy,KZ";
 let cityId = 0;
-const appid = "03371846c9b571d1a49cbb42d28b2da3";
+const appid = "70005441284456af362e05cc61f4296d";
 
 function httpRequest(url) {
     return new Promise((resolve, reject) => {
@@ -30,13 +28,27 @@ window.onload = function() {
             info.textContent = "Температура: " + Math.round(data.main.temp) + "℃";
             feels_like.textContent = " * Ощущается как: " + Math.round(data.main.feels_like) + "℃";
             clouds.textContent = " * Состояние: " + (data.weather[0].description)[0].toUpperCase() + (data.weather[0].description).slice(1);
+
+            // Для вывода времени
+            let date = new Date();
+            let hou = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+            if(hou < 10){
+                hou = "0" + hou;
+            }
+            if(min < 10){
+                min = "0" + min;
+            }
+            if(sec < 10){
+                sec = "0" + sec;
+            }
+            datee.textContent = hou + ":" + min + ":" + sec;
         } catch (e) {
             console.log("Exception:", e);
         }
     }, 1000);
 };
-
-//  Окно у уведомлений : 
 
 const divv = document.getElementById('hide');
 
