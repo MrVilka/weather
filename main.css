@@ -13,14 +13,17 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    overflow: hidden;
 }
 
-.window_notifs span {
+#quantityShow {
     position: relative;
     box-shadow: 20px 20px 20px #0000002A;
     display: block;
     text-align: center;
     margin-top: 5%;
+    font-size: 2em;
+    margin-bottom: 2.5%;
 }
 
 .temp2024 {
@@ -80,6 +83,16 @@ body {
     width: 90%;
 }
 
+.form button {
+    padding: 10px;
+    position: absolute;
+}
+
+textarea {
+    resize: none;
+}
+
+
 /* Работа с Уведомлениями */
 
 .window_notifs {
@@ -92,6 +105,7 @@ body {
     margin-top: 6.5%;
     background: -webkit-linear-gradient(rgb(81, 0, 255), rgb(241, 12, 172));
     z-index: 1;
+    overflow-y: scroll;
 }
 
 ul li ul {
@@ -111,9 +125,40 @@ ul li:hover > ul {
     animation-duration: 1s;
 }
 
+
+.hidden {
+    opacity: 0;
+}
+
+            /* Для уведомлений */
+
+.nots {
+    margin-left: 3%;
+    border-bottom: grey 1px solid;
+    width: 90%;
+    border-left: grey 1px solid;
+    padding: 1%;
+    border-radius: 7%;
+}
+
+.titles {
+    font-size: 1.5em;
+}
+
+.areats::before {
+    content: " * ";
+    color: white;
+}
+
+.areats {
+    width: 80%;
+    overflow-wrap: break-word;
+}
+
 @keyframes tohide {
     from {
         opacity: 0;
+        transform: translateX(200px);
     }
     to {
         opacity: 1;
@@ -126,8 +171,17 @@ ul li:hover > ul {
         height: 100vh;
       }
     }
+    .window_notifs {
+        width: 55%
+    }
     .title {
         margin-top: -10%;
+    }
+    .titles {
+        font-size: 1.1em;
+    }
+    #quantityShow {
+        font-size: 1.4em;
     }
 }
 
@@ -142,9 +196,6 @@ ul li:hover > ul {
     .forbutton {
         height: 10%;
     }
-    .window_notifs span {
-        font-size: 23px;
-    }
 }
 
 @media only screen and (min-width: 1700px){
@@ -153,8 +204,5 @@ ul li:hover > ul {
     }
     .forbutton {
         height: 20%;
-    }
-    .window_notifs span {
-        font-size: 33px;
     }
 }
