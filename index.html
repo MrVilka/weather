@@ -29,9 +29,21 @@
                 <ul>
                     <li>
                         <div id="hide" class="window_notifs">
-                            <span>
-                                Уведомления
+                            <span id="quantityShow">
+                                
                             </span>
+                            <div class="notifications" id="container0">
+                                <!-- #1 -->
+                                <div id="not1" class="nots hidden">
+                                    <span id="title1" class="titles">
+                                        
+                                    </span> <br>
+                                    <span id="areat1" class="areats">
+
+                                    </span>
+                                </div>
+                                <!-- #2 -->
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -50,7 +62,11 @@
         <br>
         <span id="clouds" style="font-size: 20px"> </span>
     </div>
-        <!-- <div id="hide" class="window_notifs"></div> -->
+
+    <div class="form">
+        <textarea placeholder="Введите текст, это все для теста!!!" name="" id="areatext" cols="30" rows="10"></textarea>
+        <button  onclick="getText()">Accept</button>
+    </div>
 
     <script src="./tempjs.js"> </script>
 </body>
